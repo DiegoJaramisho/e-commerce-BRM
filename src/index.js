@@ -8,12 +8,14 @@ import './models/Compras.js';
 import './models/Compras_productos.js';
 import UsersController from './controllers/UsersController.js'
 import router from './routes/index.js';
+import cors from 'cors'
 // import usersController from './controllers/Users.js';
 
 const app = express()
 
 app.use(express.json())
 app.use(morgan("tiny"))
+app.use(cors)
 
 
 const main = async () => {
